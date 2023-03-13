@@ -16,9 +16,3 @@ CREATE TABLE Ticket (
                         FOREIGN KEY(client_id) REFERENCES Client(id),
                         CONSTRAINT planet_name_latin_upper_digit
                             CHECK (from_planet_id ~ '^[A-Z0-9]+$' AND to_planet_id ~ '^[A-Z0-9]+$'));
-
-INSERT INTO client(name) VALUES('Var');
-
-INSERT INTO Ticket(client_id, from_planet_id, to_planet_id) VALUES (1, 'mars', 'EARTH');
-
-DROP TABLE Ticket;
